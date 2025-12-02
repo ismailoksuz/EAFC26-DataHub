@@ -1,0 +1,92 @@
+{
+  "wonderkid": {
+    "max_age": 23,
+    "min_potential": 85
+  },
+  "bargain": {
+    "max_value_eur": 15000000,
+    "min_overall": 82
+  },
+  "filters": [
+    {
+      "file": "top_200_wonderkids_u21.json",
+      "cond": "age <= 21 and potential >= 85",
+      "sort": "potential",
+      "limit": 200
+    },
+    {
+      "file": "top_300_wonderkids_u23.json",
+      "cond": "age <= 23 and potential >= 84",
+      "sort": "potential",
+      "limit": 300
+    },
+    {
+      "file": "growth_monsters.json",
+      "cond": "(potential - overall) >= 15 and age <= 23",
+      "sort": [
+        "potential",
+        "overall"
+      ]
+    },
+    {
+      "file": "fastest_100_players.json",
+      "cond": "pace.notna()",
+      "sort": "pace",
+      "limit": 100
+    },
+    {
+      "file": "strongest_100_players.json",
+      "cond": "physic.notna()",
+      "sort": "physic",
+      "limit": 100
+    },
+    {
+      "file": "best_passing_players.json",
+      "cond": "passing.notna()",
+      "sort": "passing",
+      "limit": 150
+    },
+    {
+      "file": "best_dribblers.json",
+      "cond": "dribbling.notna()",
+      "sort": "dribbling",
+      "limit": 150
+    },
+    {
+      "file": "best_defenders.json",
+      "cond": "defending.notna()",
+      "sort": "defending",
+      "limit": 100
+    },
+    {
+      "file": "5_star_skillers.json",
+      "cond": "skill_moves == 5",
+      "sort": "overall"
+    },
+    {
+      "file": "5_star_weak_foot.json",
+      "cond": "weak_foot == 5",
+      "sort": "overall"
+    },
+    {
+      "file": "best_penalty_takers.json",
+      "cond": "mentality_penalties >= 90",
+      "sort": "mentality_penalties"
+    },
+    {
+      "file": "best_free_kick_takers.json",
+      "cond": "skill_fk_accuracy >= 88",
+      "sort": "skill_fk_accuracy"
+    },
+    {
+      "file": "bosman_2026_full.json",
+      "cond": "club_contract_valid_until_year == 2026",
+      "sort": "overall"
+    },
+    {
+      "file": "free_agents_75plus.json",
+      "cond": "club_name.isnull() and overall >= 75",
+      "sort": "overall"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+div[data-testid="stSidebar"] div.stButton>button {
+    color: white !important;
+    background-color: #07a47d;
+    border: 1px solid #555555;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: left;
+    padding-left: 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+div[data-testid="stSidebar"] div.stButton>button:hover {
+    background-color: #07a47d;
+    border: 1px solid #777777;
+}
+
+div[data-testid="stSidebar"] button {
+    color: white !important;
+}
