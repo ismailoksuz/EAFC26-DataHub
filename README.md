@@ -60,7 +60,7 @@ streamlit run src/app_dashboard.py
 
 ### Optional: Rebuilding Data Lists
 
-f you modify the filtering criteria in the source code or update the main `data/players.csv` file, you must run the generation script to update the lists:
+If you modify the filtering criteria in the source code or update the main `data/players.csv` file, you must run the generation script to update the lists:
 
 ```bash
 python src/generate.py
